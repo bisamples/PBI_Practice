@@ -1,0 +1,189 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "measure_table.of_sex_m_per_island_sample_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure table",
+			          "ConceptualProperty": "% of Sex (M) per Island (Sample Number)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of Males": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.cumulative_sum_sample_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure table",
+			          "ConceptualProperty": "Cumulative SUM (Sample Number)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cumulative Growth": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.cumulative_sum_last_y_sample_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure table",
+			          "ConceptualProperty": "Cumulative SUM Last Y (Sample Number)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cumulative Growth Last Year": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.sum_of_sample_number_sex_m": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure table",
+			          "ConceptualProperty": "SUM of Sample Number Sex (M)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Total Males": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.sum_of_sample_number_sex_f": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure table",
+			          "ConceptualProperty": "SUM of Sample Number Sex (F)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Total Females": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.cumulative_growth_difference_current__last_y_sample_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure table",
+			          "ConceptualProperty": "Cumulative Growth Difference (Current - Last Y) (Sample Number)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cumulative Growth Difference": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.sum_of_sample_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure table",
+			          "ConceptualProperty": "SUM of Sample Number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of Penguins": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Total Penguins": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.of_sex_f_per_island_sample_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure table",
+			          "ConceptualProperty": "% of Sex (F) per Island (Sample Number)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of Females": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

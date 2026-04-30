@@ -1,0 +1,1478 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Slicer Panel",
+  "name": "Bookmarke17d8b3e45f6e1dd70c4",
+  "options": {
+    "targetVisualNames": [
+      "c84abdb45ffa4b9ece5a"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection0f7038814159d8a2575b",
+    "sections": {
+      "ReportSection0f7038814159d8a2575b": {
+        "visualContainers": {
+          "87e00da97917482f2bef": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ad2bda2182440db68796",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Latitude"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9f555f9f921e0d8b1cb9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Longitude"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ae65f6b39d4dbe640811",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Island"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f1114cbedb8e505c489e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "COUNT IDs"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "map",
+              "objects": {}
+            }
+          },
+          "d433098657a8e3e03b35": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e0a02f85c25b25a267bd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "COUNT IDs"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "COUNT IDs"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "2e0bde68b78520d74286": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "dfa589e385d4abdd9e0a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "COUNT Sex (M)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "COUNT Sex (M)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "3669156a3db2ad6a1e39": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b2824603ea7d0b8036d2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "COUNT Sex (F)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "COUNT Sex (F)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "076c49c390c2988fbedb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "33bcc75205eb2a8b39c9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "% of Sex (M) per Island"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "% of Sex (M) per Island"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "7693e77ef5a23e6c6633": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "677a27ce161dbb70083e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "% of Sex (F) per Island"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "% of Sex (F) per Island"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "39e07dc4a1e348ec7593": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2d84c9b68d406882d374",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "AVG Body Mass(g)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "AVG Body Mass(g)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "2b6424f72d111cd14ef4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d6d7a70305ddd5545509",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "AVG Culmen Length(mm)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "AVG Culmen Length(mm)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "f871f8ebf81a2f002690": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "5f644c010ed912d24e27",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "AVG Culmen Depth(mm)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "AVG Culmen Depth(mm)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "1df87009fcf8ae753962": {
+            "singleVisual": {
+              "visualType": "basicShape",
+              "objects": {}
+            }
+          },
+          "67f389513dd987ca4da7": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1d757147edc589076a71",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Island"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b03fe2f0a2103ad23266",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "COUNT IDs"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bb41b638dd687627c0ba",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Sex"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "barChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "COUNT IDs"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Island"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "123baa491e1396efc34b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "731a3afe6a70a6497687",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "Cumulative COUNT"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "36b56bbcd0ec4757e6c0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "Cumulative COUNT Last Y"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e67e55fc4d021a7ca18e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "areaChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "5420d19a7256db00ac29": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4bf6e8c0383c270bbded",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1ccdacfc00b40e4491c0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "Cumulative Growth Difference (Current - Last Y)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "areaChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "8e9734ae0fd067edae1d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7b64c4780e9b3989b461",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Species (Short Disc)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Species (Short Disc)"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "43769d5ce05d20bd7e23": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "258086f60db4cac07295",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "18039f5fc501aec7a868": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b4b4261550b2b73234a9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Qtr"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Qtr"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "a0e524459e72c58a542a": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "a75a306e63fb061e88f6": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "8fd208c4408d20d95122": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4b660fc3bb807e931c3b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "Bogus Refresh Time"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "Bogus Refresh Time"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "a58fb45490731a1e7844": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "3e967c7edce45f7a446c": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "7a7081c59501fb8c337e": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "417147a6087bb817144b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8730446257097002c9ce",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Clutch Completion"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5b439eda6028c88265b6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "Clutch Completion Count"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "Clutch Completion Count"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Clutch Completion"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "88611776a2b06420a816": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "657858b60c5092d620b0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Island"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "527da67479980ae63955",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure table"
+                        }
+                      },
+                      "Property": "AVG & MIN & MAX Body Mass(g)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "multiRowCard",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Island"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "e3d08d4cde816a808a35": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "a4e5513a8f43f1eb73a0": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "f1369ada0cc73e549752": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "1b0fc3c408cd0fecdc6e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "21d1f541cf971833f1b7": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ad7ffa55cbdb01612884",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Individual ID"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Individual ID"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "6a22cf61559825beb059": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "97e1d417527d6d76d9b2",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Species"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Species"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "4c9a4ca5366d5bf86b72": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0aeba1f3bb632428d030",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Island"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Island"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "c06ab0d8022a5619d2b0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "355271dfe99d701695d8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Sex"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Sex"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "55e3d0d2df6f37a0a20a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e0804143c0d98b8d8001",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "studyName"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "studyName"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "65368c00ba0a1ba91d85": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ab7ced63a00a100d480c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Observation Date"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Observation Date"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Penguins"
+                        }
+                      },
+                      "Property": "Observation Date"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "c84abdb45ffa4b9ece5a": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "c232ca4d84deff03dc70": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "7f0a0cb4371007e06dd2": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "892d0993dfcb95c3d64a": {
+            "isHidden": false
+          },
+          "eb4b539ccc519252977a": {
+            "isHidden": false
+          },
+          "e68b9f14377805a40090": {
+            "isHidden": false,
+            "children": {
+              "aa2bc9dbc3df932f2169": {
+                "isHidden": false
+              }
+            }
+          },
+          "2de10ba4fb87dccdc702": {
+            "isHidden": false
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

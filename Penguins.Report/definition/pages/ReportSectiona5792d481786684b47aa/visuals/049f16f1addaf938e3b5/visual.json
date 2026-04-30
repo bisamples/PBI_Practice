@@ -1,0 +1,179 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "049f16f1addaf938e3b5",
+  "position": {
+    "x": 278.56236786469344,
+    "y": 459.70401691331926,
+    "z": 0,
+    "height": 146.13107822410149,
+    "width": 776.32135306553914,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Penguins"
+                    }
+                  },
+                  "Property": "Island"
+                }
+              },
+              "queryRef": "penguins_data.Island",
+              "nativeQueryRef": "Island"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure table"
+                    }
+                  },
+                  "Property": "COUNT Sex (M)"
+                }
+              },
+              "queryRef": "Measure table.COUNT Sex",
+              "nativeQueryRef": "COUNT Sex"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure table"
+                    }
+                  },
+                  "Property": "COUNT Sex (F)"
+                }
+              },
+              "queryRef": "Measure table.COUNT Sex (F)",
+              "nativeQueryRef": "COUNT Sex (F)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure table"
+                    }
+                  },
+                  "Property": "% of Sex (M) per Island"
+                }
+              },
+              "queryRef": "Measure table.% of Sex per Island",
+              "nativeQueryRef": "% of Sex per Island"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure table"
+                    }
+                  },
+                  "Property": "% of Sex (F) per Island"
+                }
+              },
+              "queryRef": "Measure table.% of Sex (F) per Island",
+              "nativeQueryRef": "% of Sex (F) per Island"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure table"
+                    }
+                  },
+                  "Property": "Island with most unbalanced M/F ratio amoung penguins"
+                }
+              },
+              "queryRef": "Measure table.Island with most unbalanced M/F ratio amoung penguins",
+              "nativeQueryRef": "Island with most unbalanced M/F ratio amoung penguins"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Measure table"
+                  }
+                },
+                "Property": "Island with most unbalanced M/F ratio amoung penguins"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "195.78014852405028D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure table.Island with most unbalanced M/F ratio amoung penguins"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure table.% of Sex per Island"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

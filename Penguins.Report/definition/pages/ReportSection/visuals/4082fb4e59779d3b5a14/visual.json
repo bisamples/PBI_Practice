@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "4082fb4e59779d3b5a14",
+  "position": {
+    "x": 80,
+    "y": 0,
+    "z": 4000,
+    "height": 80,
+    "width": 1136,
+    "tabOrder": 7001
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "In this pbix, I Interpreted \"Sample Number\" to mean \"Sample size\" or \"Sample amount\" for each type of individual penguin tracked (Individual ID). ",
+                    "textStyle": {
+                      "color": "#f92909"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "** Originally I interpreted \"Sample Number\" as an internal tracker of sorts and instead counted \"Individual ID\"s to get # of total penguins, ",
+                    "textStyle": {
+                      "color": "#f92909"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "hence the redundant measures & v1 of this report/answers originally sent to recruiter.",
+                    "textStyle": {
+                      "color": "#f92909"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

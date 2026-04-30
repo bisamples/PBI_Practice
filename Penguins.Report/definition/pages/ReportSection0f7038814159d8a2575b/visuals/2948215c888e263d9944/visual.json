@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "2948215c888e263d9944",
+  "position": {
+    "x": 163,
+    "y": 429.93333333333334,
+    "z": 3500,
+    "height": 211.2,
+    "width": 601,
+    "tabOrder": 9000
+  },
+  "visualGroup": {
+    "displayName": "Bottom Panel",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "51757d6d4619094881f3"
+}

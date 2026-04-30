@@ -1,0 +1,378 @@
+table 'Measure table'
+	lineageTag: 861755c5-0b20-411d-9143-d685afc17892
+
+	measure 'Largest Species Pop in 2009 (Sample Number)' = ```
+			
+			
+			VAR SUM1 =      
+			                     FILTER(
+			                                SUMMARIZE('Penguins',[Species], [Observation Date], "Pop SUM1", SUM('Penguins'[Sample Number])),
+			                                YEAR([Observation Date]) = 2009
+			                            )
+			VAR SUM2 = 
+			                    SUMMARIZE(
+			                                SUM1,[Species], "Pop SUM2", [SUM of Sample Number]
+			                             )   
+			
+			VAR TOPN1 =         
+			                    TOPN(1,
+			                        SUM2,
+			                        [Pop SUM2],
+			                        DESC
+			                        )
+			VAR Final = 
+			                    SELECTCOLUMNS(
+			                        TOPN1,
+			                        "Species",
+			                        [Species] & UNICHAR(10) & FORMAT([Pop SUM2], "#,0")
+			                         )
+			
+			RETURN 
+			        Final
+			            
+			```
+		lineageTag: ce0a730c-6956-4a15-a74f-39d773a5ea6e
+
+	measure 'COUNT IDs' = COUNT(Penguins[Individual ID])
+		formatString: 0
+		lineageTag: 26677364-ec83-4d64-a2e0-83e859e33bc6
+
+	measure 'Penguine Pop in 2007' = ```
+			
+			                        CALCULATE(
+			                            [COUNT IDs],
+			                                SAMEPERIODLASTYEAR('Calendar'[Date]),
+			                                KEEPFILTERS('Calendar'[Year] = 2007)
+			                                 )
+			```
+		formatString: 0
+		lineageTag: 36172fee-414e-402a-8593-a182aebc3d5e
+
+	measure 'Island with greatest YoY change in PoP between 07-08 table' = ```
+			
+			                                                         IF(
+			                                                            [Penguine Pop in 2007] = BLANK(), 
+			                                                             BLANK(),
+			                                                            [COUNT IDs] - [Penguine Pop in 2007]
+			                                                            )
+			```
+		formatString: 0
+		lineageTag: 85616ea7-57ed-4554-8b76-9263a370f947
+
+	measure 'Island with greatest YoY change in PoP between 07-08 card' = ```
+			
+			                    CONCATENATEX(
+			                                TOPN(1,
+			                                    'Year Summary of Counts 2007 & 2008',
+			                                    [YoY change in PoP between 07-08],
+			                                    DESC
+			                                ),
+			                                [Island] & UNICHAR(10) &  FORMAT([YoY change in PoP between 07-08], "#,0")
+			                                )
+			```
+		lineageTag: 9c50aedf-38d2-4477-811f-bb7c4ebd59c5
+
+	measure '% of penguins that live on Dream island' = DIVIDE(CALCULATE([SUM of Sample Number], FILTER('Penguins',Penguins[Island] = "Dream")), [SUM of Sample Number])
+		formatString: 0%;-0%;0%
+		lineageTag: 613e5d06-e343-4e48-b172-74c0d2737aa5
+
+	measure 'COUNT Sex (M)' = CALCULATE(COUNT('Penguins'[Sex]), FILTER('Penguins',[Sex] = "MALE"))
+		formatString: 0
+		lineageTag: f7ba9ff2-677e-4709-bc68-6667f6a6a942
+
+	measure 'COUNT Sex per Island' = ```
+			
+			                        CALCULATE(
+			                                [COUNT IDs], 
+			                                    ALLEXCEPT(Penguins,Penguins[Island]), 
+			                                    FILTER('Penguins','Penguins'[Sex] IN {"MALE", "FEMALE"})
+			                                 )
+			```
+		formatString: 0
+		lineageTag: bd2bbea2-fe51-4d66-95df-361e9d740867
+
+	measure '% of Sex (M) per Island' = DIVIDE([COUNT Sex (M)], [COUNT Sex per Island])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3ea74cc3-dd17-4594-94a4-bedd4d16d6dc
+
+	measure 'COUNT Sex (F)' = CALCULATE(COUNT('Penguins'[Sex]), FILTER('Penguins',[Sex] = "FEMALE"))
+		formatString: 0
+		lineageTag: 74b05771-cfcb-47ff-9f46-82365f3ee895
+
+	measure '% of Sex (F) per Island' = DIVIDE([COUNT Sex (F)], [COUNT Sex per Island])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c1de192a-d733-4361-9b4e-bc80c9282494
+
+	measure 'Island with most unbalanced M/F ratio amoung penguins' = ABS([% of Sex (M) per Island] - [% of Sex (F) per Island])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 920c7d06-0af8-4d2b-9a6b-dc58f5fbffd8
+
+	measure 'Which Island with most unbalanced M/F ratio amount penguins' = ```
+			
+			        CONCATENATEX(
+			                    TOPN(1,
+			                        SUMMARIZE('Penguins', [Island], "Ratios", [Island with most unbalanced M/F ratio amoung penguins (Sample Number)]),
+			                        [Ratios],
+			                        DESC
+			                        ),
+			                    [Island] & UNICHAR(10) & FORMAT([Island with most unbalanced M/F ratio amoung penguins (Sample Number)], "Percent")
+			                    )
+			```
+		lineageTag: 8d487240-40af-451c-90e1-296d7f2e595b
+
+	measure 'Cumulative COUNT' = ```
+			CALCULATE(
+			                        [COUNT IDs], 
+			                            FILTER(ALLSELECTED('Calendar'),
+			                            'Calendar'[Date] <= MAX('Calendar'[Date]))
+			                            )
+			```
+		formatString: 0
+		lineageTag: ecfea9cd-39dd-41b6-a173-5429f71c090a
+
+	measure 'Total COUNT Last Y' = ```
+			CALCULATE(
+			                            [COUNT IDs], 
+			                                DATEADD('Calendar'[Date], -1, YEAR)
+			                              )
+			```
+		formatString: 0
+		lineageTag: c36900da-a408-41e0-b626-f27fda534b6b
+
+	measure 'Cumulative COUNT Last Y' = ```
+			CALCULATE(
+			                                [Total COUNT Last Y], 
+			                                    FILTER(ALLSELECTED('Calendar'),
+			                                    'Calendar'[Date] <= MAX('Calendar'[Date])
+			                                          )
+			                                    )
+			```
+		formatString: 0
+		lineageTag: 988299c7-09d8-47cd-84f7-7d589fac4254
+
+	measure 'Cumulative Growth Difference (Current - Last Y)' = [Cumulative COUNT] - [Cumulative COUNT Last Y]
+		formatString: #,0
+		lineageTag: 7756b190-50cb-4644-9637-8ee669fc01d3
+
+	measure 'AVG Body Mass(g)' = ```
+			IF(
+			                     AVERAGE('Penguins'[Body Mass (g)]) <> BLANK(),
+			                     AVERAGE('Penguins'[Body Mass (g)]), 
+			                     0
+			                     )
+			```
+		lineageTag: 3f6829bb-4313-4c22-a038-8dbed92ca46f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AVG Culmen Length(mm)' =
+			IF(
+			                            AVERAGE('Penguins'[Culmen Length (mm)]) <> BLANK(),
+			                            AVERAGE('Penguins'[Culmen Length (mm)]),
+			                            0
+			                            )
+		formatString: 0.0
+		lineageTag: 1590b9eb-e929-4f88-8d52-59539c0c0392
+
+	measure 'AVG Culmen Depth(mm)' =
+			IF(
+			                          AVERAGE('Penguins'[Culmen Depth (mm)]) <> BLANK(),
+			                          AVERAGE('Penguins'[Culmen Depth (mm)]),
+			                          0
+			                          )
+		lineageTag: 76bc844b-8dee-4d59-aba2-198889aae8a7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Bogus Refresh Time' = NOW() // just showing the possiblity
+		formatString: m/d/yy h:nn AM/PM
+		lineageTag: 98027dc4-cca4-4bb8-bf92-75921a481401
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure 'Clutch Completion Count' = COUNT(Penguins[Clutch Completion])
+		formatString: 0
+		lineageTag: 0addce7f-0aab-4e0d-9b63-4bf9f1bcae64
+
+	measure '% of Penguins per Island ALL' = CALCULATE([COUNT IDs], ALL(Penguins[Island]))
+		formatString: 0
+		lineageTag: 8146ed7d-5494-4738-a53c-c6d8f4199ce0
+
+	measure '% of Penguins per Island' = DIVIDE([COUNT IDs], [% of Penguins per Island ALL],0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d07fa670-1bc7-4615-9e52-1f491f254c7a
+
+	measure 'MIN Body Mass(g)' = MIN('Penguins'[Body Mass (g)])
+		formatString: #,0
+		lineageTag: 17e648c6-3456-4b13-9a55-679d17b8f425
+
+	measure 'MAX Body Mass(g)' = MAX('Penguins'[Body Mass (g)])
+		formatString: #,0
+		lineageTag: 33cf8fc7-cec0-4563-b172-50ca82e09725
+
+	measure 'AVG & MIN & MAX Body Mass(g)' = FORMAT([AVG Body Mass(g)], "#,0") & " | " & FORMAT([MIN Body Mass(g)], "#,0") & " | " & FORMAT([MAX Body Mass(g)], "#,0")
+		lineageTag: d8f36da0-d7f8-4e0d-b947-6f853f472193
+
+	measure 'MAX Flipper Length(mm)' = MAX('Penguins'[Flipper Length (mm)])
+		formatString: 0
+		lineageTag: 71ba456f-0013-49c1-8b05-c429d9fbc209
+
+	measure 'MIN Flipper Length(mm)' = MIN('Penguins'[Flipper Length (mm)])
+		formatString: 0
+		lineageTag: bbd02ddd-8a64-406f-bd64-66a4cc6fed18
+
+	measure 'AVG | MIN | MAX Flipper Length' = ```
+			
+			                                 IF(FORMAT([AVG Flipper Length(mm)], "#,0") = "0", BLANK(),
+			                                    FORMAT([AVG Flipper Length(mm)], "#,0")
+			                                    ) 
+			                                    & " | " & 
+			                                    FORMAT([MIN Flipper Length(mm)], "#,0") 
+			                                    & " | " &
+			                                    FORMAT([MAX Flipper Length(mm)], "#,0")
+			```
+		lineageTag: 95f99f2a-cd0e-4d1d-a60a-cb919b889597
+
+	measure 'Island Conditional Formatting' = ```
+			
+			                                SWITCH(
+			                                    TRUE(),
+			                                       Search("*Dream*", MAX('Penguins'[Island]),,BLANK()) > 0, "#41a4ff", //blue
+			                                       Search("*Torgersen*", MAX('Penguins'[Island]),,BLANK()) > 0, "#e1f1c6", //yellow
+			                                       Search("*Biscoe*", MAX('Penguins'[Island]),,BLANK()) > 0, "#8790CE" //purple
+			                                      )
+			```
+		lineageTag: 597d997c-92a2-4dad-8394-99edcb9711b2
+
+	measure 'SUM of Sample Number' = IF(SUM('Penguins'[Sample Number]) <> BLANK(),SUM('Penguins'[Sample Number]),0)
+		formatString: #,0
+		lineageTag: 66c60ed3-96db-45d6-942f-8c694c0fc909
+
+	measure 'SUM of Sample Number Sex (M)' = ```
+			IF(
+			                                CALCULATE([SUM of Sample Number], FILTER('Penguins',[Sex] = "MALE")) <> BLANK(),
+			                                CALCULATE([SUM of Sample Number], FILTER('Penguins',[Sex] = "MALE")), 
+			                                0
+			                                 )
+			```
+		formatString: #,0
+		lineageTag: c2d1943b-e7dc-4a00-8de5-6cc116ddeb4a
+
+	measure 'SUM of Sample Number Sex (F)' = ```
+			IF(
+			                                CALCULATE([SUM of Sample Number], FILTER('Penguins',[Sex] = "FEMALE")) <> BLANK(),
+			                                CALCULATE([SUM of Sample Number], FILTER('Penguins',[Sex] = "FEMALE")), 
+			                                0
+			                                 )
+			```
+		formatString: #,0
+		lineageTag: 28028033-ea53-4b3a-b122-bf74271d87fc
+
+	measure 'SUM Sex per Island' = ```
+			
+			                        CALCULATE(
+			                                [SUM of Sample Number], 
+			                                    ALLEXCEPT(Penguins,Penguins[Island]), 
+			                                    FILTER('Penguins','Penguins'[Sex] IN {"MALE", "FEMALE"})
+			                                 )
+			```
+		formatString: 0
+		lineageTag: 83631711-cd86-424f-b409-cf0a289601b3
+
+	measure '% of Sex (M) per Island (Sample Number)' =
+			IF(
+			                                            DIVIDE([SUM of Sample Number Sex (M)], [SUM Sex per Island]) <> BLANK(),
+			                                            DIVIDE([SUM of Sample Number Sex (M)], [SUM Sex per Island]),
+			                                            0
+			                                            )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c90ae9d3-e492-423a-91be-c25c4c1c349a
+
+	measure '% of Sex (F) per Island (Sample Number)' =
+			IF(
+			                                            DIVIDE([SUM of Sample Number Sex (F)], [SUM Sex per Island]) <> BLANK(),
+			                                            DIVIDE([SUM of Sample Number Sex (F)], [SUM Sex per Island]),
+			                                            0
+			                                            )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 543570f8-d0be-411d-bf64-086b6d2c3f8e
+
+	measure '% of Penguins per Island (Sample Number)' = DIVIDE([SUM of Sample Number], [% of Penguins per Island ALL (Sample Number)],0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7d4e1a16-5830-461d-a0cb-bed84a8d0966
+
+	measure '% of Penguins per Island ALL (Sample Number)' = CALCULATE([SUM of Sample Number], ALL(Penguins[Island]))
+		formatString: 0
+		lineageTag: 0b6477dd-5d39-44fe-9076-a8031ad87e88
+
+	measure 'AVG & MIN & MAX Body Mass(g) (Sample Number)' = ```
+			
+			                IF(FORMAT([AVG Body Mass(g)], "#,0") = "0", BLANK(),
+			                   FORMAT([AVG Body Mass(g)], "#,0")
+			                  ) 
+			                  & " | " & 
+			                   FORMAT([MIN Body Mass(g)], "#,0") 
+			                  & " | " &
+			                   FORMAT([MAX Body Mass(g)], "#,0")
+			```
+		lineageTag: 3ef6ac55-7aec-4d2b-bb62-fe216218871c
+
+	measure 'AVG Flipper Length(mm)' = AVERAGE('Penguins'[Flipper Length (mm)])
+		lineageTag: 10d5179e-86f7-4b6b-bf4a-59aa246cc6da
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cumulative SUM (Sample Number)' = ```
+			CALCULATE(
+			                                            [SUM of Sample Number], 
+			                                            FILTER(ALLSELECTED('Calendar'),
+			                                                'Calendar'[Date] <= MAX('Calendar'[Date]))
+			                                          )
+			```
+		formatString: #,0
+		lineageTag: bf1c6fcc-983f-44d6-9a74-85a3285a56fd
+
+	measure 'Total SUM Last Y (Sample Number)' = ```
+			CALCULATE(
+			                                        [SUM of Sample Number], 
+			                                            DATEADD('Calendar'[Date], -1, YEAR)
+			                                            )
+			```
+		formatString: #,0
+		lineageTag: 8df155ea-eafc-4932-8b03-fe4d50fe4dfd
+
+	measure 'Cumulative SUM Last Y (Sample Number)' = ```
+			CALCULATE(
+			                                                [Total SUM Last Y (Sample Number)], 
+			                                                    FILTER(ALLSELECTED('Calendar'),
+			                                                    'Calendar'[Date] <= MAX('Calendar'[Date])
+			                                                          )
+			                                                  )
+			```
+		formatString: #,0
+		lineageTag: 6c504552-d425-45e9-882c-dede6ea4b7d1
+
+	measure 'Cumulative Growth Difference (Current - Last Y) (Sample Number)' = [Cumulative SUM (Sample Number)] - [Cumulative SUM Last Y (Sample Number)]
+		formatString: #,0
+		lineageTag: 23e62a5e-0b26-413e-9091-f733fd2a2e59
+
+	measure 'Island with most unbalanced M/F ratio amoung penguins (Sample Number)' = ABS([% of Sex (M) per Island (Sample Number)] - [% of Sex (F) per Island (Sample Number)])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7d022570-732c-4657-8f12-ddd5c81682df
+
+	measure 'SUM of Sample Number (% of ALL)' = DIVIDE([SUM of Sample Number], CALCULATE([SUM of Sample Number], ALL(Penguins[Island])))
+		formatString: 0%;-0%;0%
+		lineageTag: 38ef2df2-8ef9-4a98-8237-22fedd40ceac
+
+	partition 'Measure table-664b5157-713f-4805-91f5-302364c3cced' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

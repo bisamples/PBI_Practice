@@ -1,0 +1,56 @@
+table Calendar
+	lineageTag: 6568cd74-dda0-4455-9ac7-afacf753c8fa
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: 5658af87-505e-4e91-8f20-cadac20d96c7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = YEAR('Calendar'[Date])
+		formatString: 0
+		lineageTag: fba40e7a-49e8-4568-87cd-0009432defc4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column Month = ```
+			SWITCH(
+			            MONTH('Calendar'[Date]),
+			            1, "Jan",
+			            2, "Feb",
+			            3, "Mar",
+			            4, "Apr",
+			            5, "May",
+			            6, "Jun",
+			            7, "Jul",
+			            8, "Aug",
+			            9, "Sep",
+			            10, "Oct",
+			            11, "Nov",
+			            12, "Dec"
+			              )
+			
+			```
+		lineageTag: acf7b5b8-c869-435a-b592-c5a3ff79feee
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qtr = "Q" & QUARTER('Calendar'[Date])
+		lineageTag: 627d9ff7-62d4-45a7-ba9c-d64cfa03fb1a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar-2d679ff9-bb05-4151-a40e-0c8042003f85 = calculated
+		mode: import
+		source = CALENDARAUTO()
+
+	annotation PBI_Id = be1cee9474084efbad23f19536127915
+

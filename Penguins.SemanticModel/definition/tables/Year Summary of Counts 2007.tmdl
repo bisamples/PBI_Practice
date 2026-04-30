@@ -1,0 +1,48 @@
+table 'Year Summary of Counts 2007'
+	isHidden
+	lineageTag: b36289ea-fd28-4252-ab69-df1f9b7c364c
+
+	column Islands
+		isHidden
+		lineageTag: 518d101a-2e72-42db-a61d-2271e215cf67
+		summarizeBy: none
+		sourceColumn: Penguins[Island]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Years
+		isHidden
+		formatString: 0
+		lineageTag: c352310f-37ca-48e3-a7bb-69354fe1ced0
+		summarizeBy: none
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = User
+
+	column 'Pop #s'
+		isHidden
+		formatString: 0
+		lineageTag: 6e89836a-bbea-47c4-a6f3-7a5ed459a8be
+		summarizeBy: sum
+		sourceColumn: [Pop #]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Year Summary of Counts 2007-a0acd7ae-f9ea-4dca-8975-c862c2df2763' = calculated
+		mode: import
+		source = ```
+				
+				
+				VAR Yr2007 =  SUMMARIZE( 
+				                         FILTER(
+				                                SUMMARIZE('Penguins', [Island], [Observation Date], "Pop #", [SUM of Sample Number], "Year", YEAR('Penguins'[Observation Date])),
+				                                [Year] = 2007
+				                                ),
+				                        [Island], [Year],"Pop #",[SUM of Sample Number]
+				                        )
+				
+				RETURN Yr2007
+				```
+
+	annotation PBI_Id = 9de109c966324fb18242b31f9aa09331
+

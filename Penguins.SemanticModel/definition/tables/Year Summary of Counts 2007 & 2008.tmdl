@@ -1,0 +1,74 @@
+table 'Year Summary of Counts 2007 & 2008'
+	isHidden
+	lineageTag: b118f467-bda9-42bd-bdc6-25c3b850b79d
+
+	column Islands
+		isHidden
+		lineageTag: b46f47a0-d2c2-4f60-adc8-820c2dc8b894
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Year Summary of Counts 2007[Islands]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Years
+		isHidden
+		formatString: 0
+		lineageTag: e5b2ff2e-b3e0-4319-8be0-de1d4820a0e8
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Year Summary of Counts 2007[Years]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pop # 07'
+		isHidden
+		formatString: 0
+		lineageTag: 6994e114-ab26-4271-aca0-26c3a3e7ea0c
+		summarizeBy: sum
+		sourceColumn: Year Summary of Counts 2007[Pop #s]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Island
+		isHidden
+		lineageTag: 52292997-2050-4882-825b-8b302784791f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Year Summary of Counts 2008[Island]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		isHidden
+		formatString: 0
+		lineageTag: aa711391-9814-44c5-a4e0-6b9e466258e5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Year Summary of Counts 2008[Year]
+
+		annotation SummarizationSetBy = User
+
+	column 'Pop # 08'
+		isHidden
+		formatString: 0
+		lineageTag: f4785095-7b39-4bdc-b779-b872b73cba7f
+		summarizeBy: sum
+		sourceColumn: Year Summary of Counts 2008[Pop #]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'YoY change in PoP between 07-08' = [Pop # 08] - [Pop # 07]
+		isHidden
+		formatString: 0
+		lineageTag: 07a1f022-4575-45c7-a841-5de0011141ff
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Year Summary of Counts 2007 & 2008-9af607ca-31bf-4026-97b3-f121e43cd201' = calculated
+		mode: import
+		source = NATURALINNERJOIN('Year Summary of Counts 2008', 'Year Summary of Counts 2007')
+
+	annotation PBI_Id = 738decef0cf54de9b01a11e1c71683f4
+

@@ -1,0 +1,265 @@
+table Penguins
+	excludeFromModelRefresh
+	lineageTag: 592f4c68-e858-4a13-b1a3-1c623b76747a
+
+	column studyName
+		dataType: string
+		lineageTag: 58199f23-f434-4e7b-8994-7bc6038d5a1b
+		summarizeBy: none
+		sourceColumn: studyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sample Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0644fd07-e2c0-4a9c-ae37-ac82c8f2b7da
+		summarizeBy: none
+		sourceColumn: Sample Number
+
+		annotation SummarizationSetBy = User
+
+	column Species
+		dataType: string
+		lineageTag: a75caf9c-1077-4747-9a18-ca4b807006f1
+		summarizeBy: none
+		sourceColumn: Species
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 90775906-e91e-4735-b03a-b21643d3653b
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Island
+		dataType: string
+		lineageTag: 14fcf25f-4aad-4f5d-81ec-dfab1b12560d
+		summarizeBy: none
+		sourceColumn: Island
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stage
+		dataType: string
+		lineageTag: 059505b6-4068-4a33-892e-10112fb54f2b
+		summarizeBy: none
+		sourceColumn: Stage
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Individual ID'
+		dataType: string
+		lineageTag: b064b092-d589-4caa-9a58-408e140da3c6
+		summarizeBy: none
+		sourceColumn: Individual ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clutch Completion'
+		dataType: string
+		lineageTag: a02185dc-9a5d-4d12-b7bd-cf9c5f67d10c
+		summarizeBy: none
+		sourceColumn: Clutch Completion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Observation Date'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: f1e9b428-1d9e-428b-b67e-297b14dd4a03
+		summarizeBy: none
+		sourceColumn: Observation Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Culmen Length (mm)'
+		dataType: double
+		lineageTag: c63209f6-d5b4-4abc-8995-a5bcaa459f06
+		summarizeBy: none
+		sourceColumn: Culmen Length (mm)
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Culmen Depth (mm)'
+		dataType: double
+		lineageTag: a8f88b65-455d-46c3-b40f-3bef1fc0851a
+		summarizeBy: none
+		sourceColumn: Culmen Depth (mm)
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Flipper Length (mm)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b23d870-d4de-408f-aee2-26964b5765c5
+		summarizeBy: none
+		sourceColumn: Flipper Length (mm)
+
+		annotation SummarizationSetBy = User
+
+	column 'Body Mass (g)'
+		dataType: int64
+		formatString: 0
+		lineageTag: f111c1a4-0936-4500-b541-f3295eb24e9b
+		summarizeBy: none
+		sourceColumn: Body Mass (g)
+
+		annotation SummarizationSetBy = User
+
+	column Sex
+		dataType: string
+		lineageTag: 2ae5c3fa-9e96-4ccf-a083-c21dda46db2e
+		summarizeBy: none
+		sourceColumn: Sex
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delta 15 N (o/oo)'
+		dataType: double
+		lineageTag: 007d48f1-85c9-4a7e-9a65-aa3d603241eb
+		summarizeBy: sum
+		sourceColumn: Delta 15 N (o/oo)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Delta 13 C (o/oo)'
+		dataType: double
+		lineageTag: f2373946-18c4-410f-903c-396cd7f2b742
+		summarizeBy: sum
+		sourceColumn: Delta 13 C (o/oo)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Comments
+		dataType: string
+		lineageTag: cb2a1a1a-abeb-4a5a-bfb3-a943a071ac32
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column Continent = "Antarctica"
+		lineageTag: 2b15462f-0b87-4507-bed4-c4a7ac009658
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude =
+			SWITCH(
+			              TRUE(),
+			              Penguins[Island] = "Dream", -64.73298, //-64.23286
+			              Penguins[Island] = "Biscoe", -64.80395, //-63.83383
+			              Penguins[Island] = "Torgersen", -64.76641 //
+			                 )
+		dataType: string
+		lineageTag: 3bb8b08f-6518-4cbb-adb0-d9cad0a0b743
+		dataCategory: Latitude
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Longitude =
+			SWITCH(
+			              TRUE(),
+			              Penguins[Island] = "Dream", -64.23286,
+			              Penguins[Island] = "Biscoe", -63.83383,
+			              Penguins[Island] = "Torgersen", -64.08320
+			                 )
+		dataType: string
+		lineageTag: d1e604ea-7dac-4be0-a8b3-f93fcfce84d1
+		dataCategory: Longitude
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Species (Short Disc)' =
+			SWITCH(
+			                        'Penguins'[Species],
+			                        "Adelie Penguin (Pygoscelis adeliae)", "Adelie",
+			                        "Chinstrap penguin (Pygoscelis antarctica)", "Chinstrap",
+			                        "Gentoo penguin (Pygoscelis papua)", "Gentoo"
+			                             )
+		lineageTag: b5c3fc59-9437-4b3d-91ab-d342f4ff0f76
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Island Pop (Grand Total)' = ```
+			'Penguins'[Island] & ": " & UNICHAR(10) &
+			                            FORMAT(
+			                                  CALCULATE([SUM of Sample Number],
+			                                        ALLEXCEPT('penguins',Penguins[Island])
+			                                           ), 
+			                                  "#,0"
+			                                  )
+			                            //& " (Grand Total)"
+			// Had to create CC vs measure because can't use measure in map 
+			```
+		lineageTag: 91428eff-fb4a-4937-80b9-d01f1c857a16
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Observation Date (Year)' = YEAR(Penguins[Observation Date])
+		formatString: 0
+		lineageTag: 795f0c5a-9c8a-44b0-a24b-6fb4d95b5b8b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Observation Date (Month)' = FORMAT(Penguins[Observation Date], "mmm")
+		lineageTag: 8722a1bb-ea2b-4da9-a07b-a7e14830358c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Observation Date (Qtr)' = "Q" & CONVERT(QUARTER(Penguins[Observation Date]),STRING)
+		lineageTag: 82319de4-384e-402a-b155-337217b5b93d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Observation Date (Week)' = "W" & CONVERT(WEEKNUM(Penguins[Observation Date]), STRING)
+		lineageTag: 95470fbb-7499-4ef4-8da1-61e042382b35
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Penguins-14117e42-a85d-452c-aff0-c53bc0c93c6a = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\bradjones\OneDrive\Documents\Power BI\Reports\Penguins\penguins_data.csv"),[Delimiter=",", Columns=17, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"studyName", type text}, {"Sample Number", Int64.Type}, {"Species", type text}, {"Region", type text}, {"Island", type text}, {"Stage", type text}, {"Individual ID", type text}, {"Clutch Completion", type text}, {"Observation Date", type date}, {"Culmen Length (mm)", type number}, {"Culmen Depth (mm)", type number}, {"Flipper Length (mm)", Int64.Type}, {"Body Mass (g)", Int64.Type}, {"Sex", type text}, {"Delta 15 N (o/oo)", type number}, {"Delta 13 C (o/oo)", type number}, {"Comments", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","","Not recorded",Replacer.ReplaceValue,{"Sex"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value",".","Not recorded",Replacer.ReplaceText,{"Sex"}),
+				    #"Sorted Rows" = Table.Sort(#"Replaced Value1",{{"Individual ID", Order.Ascending}}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Sorted Rows","MALE","Male",Replacer.ReplaceText,{"Sex"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","FEMALE","Female",Replacer.ReplaceText,{"Sex"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","FEMale","Female",Replacer.ReplaceText,{"Sex"})
+				in
+				    #"Replaced Value4"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

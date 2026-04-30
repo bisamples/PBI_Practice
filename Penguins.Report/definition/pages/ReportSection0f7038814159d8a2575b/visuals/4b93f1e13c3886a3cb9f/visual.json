@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "4b93f1e13c3886a3cb9f",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 1500,
+    "height": 211.06666666666666,
+    "width": 297.26666666666665,
+    "tabOrder": 8002
+  },
+  "visualGroup": {
+    "displayName": "Multicards",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "2948215c888e263d9944"
+}

@@ -1,0 +1,10 @@
+relationship a6626088-1a4f-4e57-afdc-74798eae8931
+	fromColumn: Penguins.'Observation Date'
+	toColumn: Calendar.Date
+
+relationship 6afd8ebb-294b-47e2-9973-46c411116ea5
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Year Summary of Counts 2007'.Islands
+	toColumn: 'Year Summary of Counts 2008'.Island
+
