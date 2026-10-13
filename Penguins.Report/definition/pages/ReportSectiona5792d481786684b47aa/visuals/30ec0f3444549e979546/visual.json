@@ -48,13 +48,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Penguine Pop in 2007"
                 }
               },
-              "queryRef": "Measure table.Island with greatest YoY change in PoP between 07-08",
+              "queryRef": "Measure.Island with greatest YoY change in PoP between 07-08",
               "nativeQueryRef": "Island with greatest YoY change in PoP between 07-08"
             },
             {
@@ -62,13 +62,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "COUNT IDs"
                 }
               },
-              "queryRef": "Measure table.COUNT IDs",
+              "queryRef": "Measure.COUNT IDs",
               "nativeQueryRef": "COUNT IDs"
             },
             {
@@ -76,13 +76,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Island with greatest YoY change in PoP between 07-08 table"
                 }
               },
-              "queryRef": "Measure table.Island with greatest YoY change in PoP between 07-081",
+              "queryRef": "Measure.Island with greatest YoY change in PoP between 07-081",
               "nativeQueryRef": "Island with greatest YoY change in PoP between 07-081"
             }
           ]
@@ -119,7 +119,7 @@
             }
           },
           "selector": {
-            "metadata": "Measure table.Island with greatest YoY change in PoP between 07-081"
+            "metadata": "Measure.Island with greatest YoY change in PoP between 07-081"
           }
         },
         {
@@ -133,7 +133,7 @@
             }
           },
           "selector": {
-            "metadata": "Measure table.Island with greatest YoY change in PoP between 07-08"
+            "metadata": "Measure.Island with greatest YoY change in PoP between 07-08"
           }
         }
       ]

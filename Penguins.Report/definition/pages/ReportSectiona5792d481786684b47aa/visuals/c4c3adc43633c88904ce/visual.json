@@ -34,13 +34,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Island Conditional Formatting"
                 }
               },
-              "queryRef": "Measure table.Island Conditional Formatting",
+              "queryRef": "Measure.Island Conditional Formatting",
               "nativeQueryRef": "Island Conditional Formatting"
             }
           ]
@@ -76,7 +76,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "Island Conditional Formatting"

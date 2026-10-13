@@ -34,13 +34,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "AVG | MIN | MAX Flipper Length"
                 }
               },
-              "queryRef": "Measure table.AVG Culmen Length & MIN Flipper Length & MAX Flipper Length",
+              "queryRef": "Measure.AVG Culmen Length & MIN Flipper Length & MAX Flipper Length",
               "nativeQueryRef": "AVG | MIN | MAX Flipper Length"
             }
           ]

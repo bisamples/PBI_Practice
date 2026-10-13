@@ -39,13 +39,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Cumulative Growth Difference (Current - Last Y) (Sample Number)"
                 }
               },
-              "queryRef": "Measure table.Cumulative Growth Difference (Current - Last Y) (Sample Number)",
+              "queryRef": "Measure.Cumulative Growth Difference (Current - Last Y) (Sample Number)",
               "nativeQueryRef": "Cumulative Growth Difference",
               "displayName": "Cumulative Growth Difference"
             }

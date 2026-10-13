@@ -39,13 +39,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "SUM of Sample Number"
                 }
               },
-              "queryRef": "Measure table.SUM of Sample Number",
+              "queryRef": "Measure.SUM of Sample Number",
               "nativeQueryRef": "SUM of Sample Number"
             }
           ]
@@ -58,7 +58,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure table"
+                    "Entity": "Measure"
                   }
                 },
                 "Property": "Clutch Completion Count"

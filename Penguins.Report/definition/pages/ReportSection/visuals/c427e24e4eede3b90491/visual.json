@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "% of penguins that live on Dream island"
                 }
               },
-              "queryRef": "Measure table.% of penguins that live on Dream island",
+              "queryRef": "Measure.% of penguins that live on Dream island",
               "nativeQueryRef": "% of penguins that live on Dream island"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure table"
+                    "Entity": "Measure"
                   }
                 },
                 "Property": "% of penguins that live on Dream island"

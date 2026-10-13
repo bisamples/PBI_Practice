@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 0.83333333333333337
       },
       "nodes": [
         {
@@ -13,7 +13,7 @@
             "x": 1348.0000000000002,
             "y": 0
           },
-          "nodeIndex": "Measure table",
+          "nodeIndex": "Measure",
           "nodeLineageTag": "861755c5-0b20-411d-9143-d685afc17892",
           "size": {
             "height": 412.33333333333337,

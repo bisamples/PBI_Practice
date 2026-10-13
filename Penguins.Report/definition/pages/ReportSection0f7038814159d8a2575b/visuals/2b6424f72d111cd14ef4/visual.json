@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "AVG Culmen Length(mm)"
                 }
               },
-              "queryRef": "Measure table.AVG Culmen Length(mm)",
+              "queryRef": "Measure.AVG Culmen Length(mm)",
               "nativeQueryRef": "AVG Culmen Length(mm)"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure table"
+                    "Entity": "Measure"
                   }
                 },
                 "Property": "AVG Culmen Length(mm)"

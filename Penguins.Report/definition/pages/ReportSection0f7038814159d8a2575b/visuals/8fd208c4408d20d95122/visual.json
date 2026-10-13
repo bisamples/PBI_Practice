@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Bogus Refresh Time"
                 }
               },
-              "queryRef": "Measure table.Bogus Refresh Time",
+              "queryRef": "Measure.Bogus Refresh Time",
               "nativeQueryRef": "Bogus Refresh Time"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure table"
+                    "Entity": "Measure"
                   }
                 },
                 "Property": "Bogus Refresh Time"

@@ -39,13 +39,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Cumulative SUM (Sample Number)"
                 }
               },
-              "queryRef": "Measure table.Cumulative SUM (Sample Number)",
+              "queryRef": "Measure.Cumulative SUM (Sample Number)",
               "nativeQueryRef": "Cumulative Growth",
               "displayName": "Cumulative Growth"
             },
@@ -54,13 +54,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Cumulative SUM Last Y (Sample Number)"
                 }
               },
-              "queryRef": "Measure table.Cumulative SUM Last Y (Sample Number)",
+              "queryRef": "Measure.Cumulative SUM Last Y (Sample Number)",
               "nativeQueryRef": "Cumulative Growth Last Year",
               "displayName": "Cumulative Growth Last Year"
             }

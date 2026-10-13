@@ -69,7 +69,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "COUNT IDs"
@@ -94,7 +94,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "COUNT IDs"
@@ -114,7 +114,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "COUNT IDs"
@@ -134,7 +134,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "COUNT Sex (M)"
@@ -154,7 +154,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "COUNT Sex (M)"
@@ -174,7 +174,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "COUNT Sex (F)"
@@ -194,7 +194,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "COUNT Sex (F)"
@@ -214,7 +214,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "% of Sex (M) per Island"
@@ -234,7 +234,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "% of Sex (M) per Island"
@@ -254,7 +254,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "% of Sex (F) per Island"
@@ -274,7 +274,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "% of Sex (F) per Island"
@@ -294,7 +294,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "AVG Body Mass(g)"
@@ -314,7 +314,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "AVG Body Mass(g)"
@@ -334,7 +334,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "AVG Culmen Length(mm)"
@@ -354,7 +354,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "AVG Culmen Length(mm)"
@@ -374,7 +374,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "AVG Culmen Depth(mm)"
@@ -394,7 +394,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "AVG Culmen Depth(mm)"
@@ -435,7 +435,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "COUNT IDs"
@@ -470,7 +470,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "COUNT IDs"
@@ -504,7 +504,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "Cumulative COUNT"
@@ -519,7 +519,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "Cumulative COUNT Last Y"
@@ -603,7 +603,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "Cumulative Growth Difference (Current - Last Y)"
@@ -834,7 +834,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "Bogus Refresh Time"
@@ -854,7 +854,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "Bogus Refresh Time"
@@ -907,7 +907,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "Clutch Completion Count"
@@ -927,7 +927,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "Clutch Completion Count"
@@ -976,7 +976,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Measure table"
+                          "Entity": "Measure"
                         }
                       },
                       "Property": "AVG & MIN & MAX Body Mass(g)"

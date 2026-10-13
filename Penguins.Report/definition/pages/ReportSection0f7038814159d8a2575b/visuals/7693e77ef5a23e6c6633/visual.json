@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "% of Sex (F) per Island (Sample Number)"
                 }
               },
-              "queryRef": "Measure table.% of Sex (F) per Island (Sample Number)",
+              "queryRef": "Measure.% of Sex (F) per Island (Sample Number)",
               "nativeQueryRef": "% of Females",
               "displayName": "% of Females"
             }
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure table"
+                    "Entity": "Measure"
                   }
                 },
                 "Property": "% of Sex (F) per Island"
