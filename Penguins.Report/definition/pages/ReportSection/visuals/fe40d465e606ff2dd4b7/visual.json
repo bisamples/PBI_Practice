@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Which Island with most unbalanced M/F ratio amount penguins"
                 }
               },
-              "queryRef": "Measure table._ Unbalanced",
+              "queryRef": "Measure._ Unbalanced",
               "nativeQueryRef": "_ Unbalanced"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure table"
+                    "Entity": "Measure"
                   }
                 },
                 "Property": "Which Island with most unbalanced M/F ratio amount penguins"

@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "SUM of Sample Number Sex (M)"
                 }
               },
-              "queryRef": "Measure table.SUM of Sample Number Sex (M)",
+              "queryRef": "Measure.SUM of Sample Number Sex (M)",
               "nativeQueryRef": "Total Males",
               "displayName": "Total Males"
             }
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure table"
+                    "Entity": "Measure"
                   }
                 },
                 "Property": "COUNT Sex (M)"

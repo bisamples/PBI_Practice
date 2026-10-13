@@ -34,13 +34,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "AVG & MIN & MAX Body Mass(g) (Sample Number)"
                 }
               },
-              "queryRef": "Measure table.% of Peng per Island & MIN & MAX Body Mass(g) (Sample Number)",
+              "queryRef": "Measure.% of Peng per Island & MIN & MAX Body Mass(g) (Sample Number)",
               "nativeQueryRef": "AVG & MIN & MAX Body Mass(g) (Sample Number)"
             }
           ]

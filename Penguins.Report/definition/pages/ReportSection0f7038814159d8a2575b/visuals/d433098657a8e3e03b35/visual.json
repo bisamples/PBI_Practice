@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "SUM of Sample Number"
                 }
               },
-              "queryRef": "Measure table.SUM of Sample Number",
+              "queryRef": "Measure.SUM of Sample Number",
               "nativeQueryRef": "Total Penguins",
               "displayName": "Total Penguins"
             }
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure table"
+                    "Entity": "Measure"
                   }
                 },
                 "Property": "COUNT IDs"

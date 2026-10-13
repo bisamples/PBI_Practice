@@ -6,14 +6,14 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["Penguins","Measure table"]
+annotation PBI_QueryOrder = ["Penguins","Measure"]
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table Penguins
-ref table 'Measure table'
+ref table 'Measure'
 ref table Calendar
 ref table 'Year Summary of Counts 2007'
 ref table 'Year Summary of Counts 2008'

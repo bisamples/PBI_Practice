@@ -5,10 +5,10 @@ cultureInfo en-US
 			  "Version": "2.0.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "measure_table.of_sex_m_per_island_sample_number": {
+			    "measure.of_sex_m_per_island_sample_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Measure table",
+			          "ConceptualEntity": "Measure",
 			          "ConceptualProperty": "% of Sex (M) per Island (Sample Number)"
 			        }
 			      },
@@ -26,10 +26,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.cumulative_sum_sample_number": {
+			    "measure.cumulative_sum_sample_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Measure table",
+			          "ConceptualEntity": "Measure",
 			          "ConceptualProperty": "Cumulative SUM (Sample Number)"
 			        }
 			      },
@@ -47,10 +47,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.cumulative_sum_last_y_sample_number": {
+			    "measure.cumulative_sum_last_y_sample_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Measure table",
+			          "ConceptualEntity": "Measure",
 			          "ConceptualProperty": "Cumulative SUM Last Y (Sample Number)"
 			        }
 			      },
@@ -68,10 +68,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.sum_of_sample_number_sex_m": {
+			    "measure.sum_of_sample_number_sex_m": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Measure table",
+			          "ConceptualEntity": "Measure",
 			          "ConceptualProperty": "SUM of Sample Number Sex (M)"
 			        }
 			      },
@@ -89,10 +89,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.sum_of_sample_number_sex_f": {
+			    "measure.sum_of_sample_number_sex_f": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Measure table",
+			          "ConceptualEntity": "Measure",
 			          "ConceptualProperty": "SUM of Sample Number Sex (F)"
 			        }
 			      },
@@ -110,10 +110,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.cumulative_growth_difference_current__last_y_sample_number": {
+			    "measure.cumulative_growth_difference_current__last_y_sample_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Measure table",
+			          "ConceptualEntity": "Measure",
 			          "ConceptualProperty": "Cumulative Growth Difference (Current - Last Y) (Sample Number)"
 			        }
 			      },
@@ -131,10 +131,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.sum_of_sample_number": {
+			    "measure.sum_of_sample_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Measure table",
+			          "ConceptualEntity": "Measure",
 			          "ConceptualProperty": "SUM of Sample Number"
 			        }
 			      },
@@ -162,10 +162,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.of_sex_f_per_island_sample_number": {
+			    "measure.of_sex_f_per_island_sample_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Measure table",
+			          "ConceptualEntity": "Measure",
 			          "ConceptualProperty": "% of Sex (F) per Island (Sample Number)"
 			        }
 			      },

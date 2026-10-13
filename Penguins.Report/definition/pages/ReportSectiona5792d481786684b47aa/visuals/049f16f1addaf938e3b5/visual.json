@@ -34,13 +34,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "COUNT Sex (M)"
                 }
               },
-              "queryRef": "Measure table.COUNT Sex",
+              "queryRef": "Measure.COUNT Sex",
               "nativeQueryRef": "COUNT Sex"
             },
             {
@@ -48,13 +48,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "COUNT Sex (F)"
                 }
               },
-              "queryRef": "Measure table.COUNT Sex (F)",
+              "queryRef": "Measure.COUNT Sex (F)",
               "nativeQueryRef": "COUNT Sex (F)"
             },
             {
@@ -62,13 +62,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "% of Sex (M) per Island"
                 }
               },
-              "queryRef": "Measure table.% of Sex per Island",
+              "queryRef": "Measure.% of Sex per Island",
               "nativeQueryRef": "% of Sex per Island"
             },
             {
@@ -76,13 +76,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "% of Sex (F) per Island"
                 }
               },
-              "queryRef": "Measure table.% of Sex (F) per Island",
+              "queryRef": "Measure.% of Sex (F) per Island",
               "nativeQueryRef": "% of Sex (F) per Island"
             },
             {
@@ -90,13 +90,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Island with most unbalanced M/F ratio amoung penguins"
                 }
               },
-              "queryRef": "Measure table.Island with most unbalanced M/F ratio amoung penguins",
+              "queryRef": "Measure.Island with most unbalanced M/F ratio amoung penguins",
               "nativeQueryRef": "Island with most unbalanced M/F ratio amoung penguins"
             }
           ]
@@ -109,7 +109,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measure table"
+                    "Entity": "Measure"
                   }
                 },
                 "Property": "Island with most unbalanced M/F ratio amoung penguins"
@@ -133,7 +133,7 @@
             }
           },
           "selector": {
-            "metadata": "Measure table.Island with most unbalanced M/F ratio amoung penguins"
+            "metadata": "Measure.Island with most unbalanced M/F ratio amoung penguins"
           }
         }
       ],
@@ -169,7 +169,7 @@
             }
           },
           "selector": {
-            "metadata": "Measure table.% of Sex per Island"
+            "metadata": "Measure.% of Sex per Island"
           }
         }
       ]

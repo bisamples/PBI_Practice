@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Largest Species Pop in 2009 (Sample Number)"
                 }
               },
-              "queryRef": "Measure table.Largest Species Pop in 2009",
+              "queryRef": "Measure.Largest Species Pop in 2009",
               "nativeQueryRef": "Largest Species Pop in 2009 (Sample Number)"
             }
           ]

@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure table"
+                      "Entity": "Measure"
                     }
                   },
                   "Property": "Island with greatest YoY change in PoP between 07-08 card"
                 }
               },
-              "queryRef": "Measure table.Island with greatest YoY change in PoP between 07-08 card",
+              "queryRef": "Measure.Island with greatest YoY change in PoP between 07-08 card",
               "nativeQueryRef": "Island with greatest YoY change in PoP between 07-08 card"
             }
           ]

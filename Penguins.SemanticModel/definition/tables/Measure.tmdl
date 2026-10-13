@@ -1,4 +1,4 @@
-table 'Measure table'
+table 'Measure'
 	lineageTag: 861755c5-0b20-411d-9143-d685afc17892
 
 	measure 'Largest Species Pop in 2009 (Sample Number)' = ```
@@ -364,7 +364,7 @@ table 'Measure table'
 		formatString: 0%;-0%;0%
 		lineageTag: 38ef2df2-8ef9-4a98-8237-22fedd40ceac
 
-	partition 'Measure table-664b5157-713f-4805-91f5-302364c3cced' = m
+	partition 'Measure-664b5157-713f-4805-91f5-302364c3cced' = m
 		mode: import
 		source =
 				let
